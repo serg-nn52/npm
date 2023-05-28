@@ -1,26 +1,58 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "module": "esnext",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES6",
+    "sourceMap": false,
+    "outDir": "dist",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "types": ["jest"],
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "ES6",
+      "ScriptHost",
+      "ES2016.Array.Include"
     ],
     "allowJs": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "cypress/**/*.ts",
+    "environment.d.ts",
+    "src/assets/**/*.svg",
+    "src/index.ts",
+    "src/router/router.js",
+    "src/attributes.tsx"
+  ],
+  "exclude": [
+    "**/node_modules/**/*",
+    "node_modules",
+    "./node_modules/*",
+    "**/*.test.ts",
+    "**/*.cy.ts",
+    "test/*.ts",
+    "dist"
   ]
 }
